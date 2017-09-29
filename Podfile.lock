@@ -1,0 +1,37 @@
+PODS:
+  - Cartography (2.0.0)
+  - Crashlytics (3.8.5):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.12)
+  - Masonry (1.0.2)
+  - Realm (2.8.3):
+    - Realm/Headers (= 2.8.3)
+  - Realm/Headers (2.8.3)
+
+DEPENDENCIES:
+  - Cartography (from `git@github.com:robb/Cartography.git`, branch `master`)
+  - Crashlytics
+  - Fabric
+  - Masonry
+  - Realm
+
+EXTERNAL SOURCES:
+  Cartography:
+    :branch: master
+    :git: git@github.com:robb/Cartography.git
+
+CHECKOUT OPTIONS:
+  Cartography:
+    :commit: 6b1e8755ab4e1209dbde03ea0b2e04875ccd72fb
+    :git: git@github.com:robb/Cartography.git
+
+SPEC CHECKSUMS:
+  Cartography: 626358af52394115799d10d5ad03d6a5872239c9
+  Crashlytics: dfbae35ef22ca189240d230ad501feea4ee85d2d
+  Fabric: f050464eac45a2ce5a8e6e6a07e977c0df32fe28
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  Realm: 3601ef091c8c499a31101d8563b991e75546cdce
+
+PODFILE CHECKSUM: 5817d0c37b9c54e23c6407c81fb95d7eaa315e12
+
+COCOAPODS: 1.2.1

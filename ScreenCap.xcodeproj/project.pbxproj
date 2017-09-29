@@ -7,12 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23B78A2A50E5603533AFFE23 /* Pods_ScreenCapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 701BD0F2417FCBCE7E6F7D61 /* Pods_ScreenCapTests.framework */; };
+		28FDA796FF12AE74D1B0FF7C /* Pods_ScreenCap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3B7806D7D3C3E01D40B6DB /* Pods_ScreenCap.framework */; };
+		5F08230B1F7DB5E4002ACE6E /* SBApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0823021F7DB5DD002ACE6E /* SBApplication.m */; };
+		5F08230C1F7DB5E4002ACE6E /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0823041F7DB5DF002ACE6E /* Tools.m */; };
+		5F08230D1F7DB5E4002ACE6E /* URLAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0823071F7DB5E1002ACE6E /* URLAsset.m */; };
+		5F08230E1F7DB5E4002ACE6E /* FilterVideoType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0823081F7DB5E2002ACE6E /* FilterVideoType.m */; };
+		5F08230F1F7DB5E4002ACE6E /* VideoInfomation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F08230A1F7DB5E4002ACE6E /* VideoInfomation.m */; };
+		5F0823351F7DB761002ACE6E /* VideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0823341F7DB761002ACE6E /* VideoController.m */; };
+		5F08233C1F7DE5D2002ACE6E /* VideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F08232B1F7DB654002ACE6E /* VideoPlayerViewController.m */; };
+		5F08233D1F7DE5D2002ACE6E /* ColorPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F08231E1F7DB617002ACE6E /* ColorPanelViewController.m */; };
+		5F08233E1F7DE5D2002ACE6E /* NSView+Moveable.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F08231C1F7DB616002ACE6E /* NSView+Moveable.m */; };
+		5F08233F1F7DE5D2002ACE6E /* SBAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0823141F7DB614002ACE6E /* SBAlertView.m */; };
+		5F0823401F7DE5D2002ACE6E /* SBOpenURLWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0823221F7DB61A002ACE6E /* SBOpenURLWindowController.m */; };
+		5F0823411F7DE5D2002ACE6E /* SBPlayerIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0823281F7DB61C002ACE6E /* SBPlayerIconView.m */; };
+		5F0823421F7DE5D2002ACE6E /* SBPlaylistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0823181F7DB615002ACE6E /* SBPlaylistItem.m */; };
+		5F0823431F7DE5D2002ACE6E /* SBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0823121F7DB614002ACE6E /* SBView.m */; };
+		5F0823441F7DE5D2002ACE6E /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F08231F1F7DB618002ACE6E /* TitleViewController.m */; };
+		5F0823451F7DE5D2002ACE6E /* ToolViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 5F0823231F7DB61A002ACE6E /* ToolViewController.h */; };
+		5F0823461F7DE5D2002ACE6E /* ToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0823241F7DB61B002ACE6E /* ToolViewController.m */; };
+		5F0823471F7DE6F7002ACE6E /* VLCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0823391F7DC27C002ACE6E /* VLCKit.framework */; };
+		5F0823481F7DE6F7002ACE6E /* VLCKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0823391F7DC27C002ACE6E /* VLCKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5F08234B1F7DF965002ACE6E /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F08234A1F7DF965002ACE6E /* Test.swift */; };
+		5F11EA901F7E075100D2A57F /* ColorPanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F08231A1F7DB616002ACE6E /* ColorPanelViewController.xib */; };
+		5F11EA911F7E075D00D2A57F /* SBOpenURLWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0823151F7DB614002ACE6E /* SBOpenURLWindowController.xib */; };
+		5F11EA921F7E075F00D2A57F /* SBPlayerIconView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F08231B1F7DB616002ACE6E /* SBPlayerIconView.xib */; };
+		5F11EA931F7E076200D2A57F /* TitleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0823251F7DB61B002ACE6E /* TitleViewController.xib */; };
+		5F11EA941F7E076400D2A57F /* ToolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0823191F7DB615002ACE6E /* ToolViewController.xib */; };
+		5F11EA951F7E141900D2A57F /* VideoPlayerWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0823311F7DB6F1002ACE6E /* VideoPlayerWindowController.m */; };
+		5F11EA961F7E141900D2A57F /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F08232E1F7DB689002ACE6E /* Document.m */; };
+		5F11EA971F7E187700D2A57F /* ISSoundAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F08222E1F7DB4EC002ACE6E /* ISSoundAdditions.m */; };
+		5F11EA991F7E1F3200D2A57F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F11EA981F7E1EC400D2A57F /* MainMenu.xib */; };
+		5F7694791F7AF077004AB34D /* DeviceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7694781F7AF077004AB34D /* DeviceList.swift */; };
 		5FF180831F7AC7F0003E2C06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF180821F7AC7F0003E2C06 /* AppDelegate.swift */; };
 		5FF180851F7AC7F0003E2C06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF180841F7AC7F0003E2C06 /* ViewController.swift */; };
 		5FF180871F7AC7F0003E2C06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FF180861F7AC7F0003E2C06 /* Assets.xcassets */; };
 		5FF1808A1F7AC7F0003E2C06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FF180881F7AC7F0003E2C06 /* Main.storyboard */; };
 		5FF180961F7AC7F0003E2C06 /* ScreenCapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF180951F7AC7F0003E2C06 /* ScreenCapTests.swift */; };
 		5FF180A11F7AC7F0003E2C06 /* ScreenCapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF180A01F7AC7F0003E2C06 /* ScreenCapUITests.swift */; };
+		5FF180B01F7ACA07003E2C06 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF180AF1F7ACA07003E2C06 /* Recorder.swift */; };
+		5FF180B41F7ACED9003E2C06 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF180B31F7ACED9003E2C06 /* Test.m */; };
+		E474CCCCEA727147F8574AB5 /* Pods_ScreenCapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37033674376E028EDFD803AB /* Pods_ScreenCapUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +67,70 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5F0823491F7DE6F7002ACE6E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5F0823481F7DE6F7002ACE6E /* VLCKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		37033674376E028EDFD803AB /* Pods_ScreenCapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScreenCapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F08222D1F7DB4EC002ACE6E /* ISSoundAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISSoundAdditions.h; sourceTree = "<group>"; };
+		5F08222E1F7DB4EC002ACE6E /* ISSoundAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISSoundAdditions.m; sourceTree = "<group>"; };
+		5F0823011F7DB5DD002ACE6E /* SBApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBApplication.h; sourceTree = "<group>"; };
+		5F0823021F7DB5DD002ACE6E /* SBApplication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBApplication.m; sourceTree = "<group>"; };
+		5F0823031F7DB5DE002ACE6E /* FilterVideoType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterVideoType.h; sourceTree = "<group>"; };
+		5F0823041F7DB5DF002ACE6E /* Tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
+		5F0823051F7DB5DF002ACE6E /* Tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
+		5F0823061F7DB5E0002ACE6E /* URLAsset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLAsset.h; sourceTree = "<group>"; };
+		5F0823071F7DB5E1002ACE6E /* URLAsset.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLAsset.m; sourceTree = "<group>"; };
+		5F0823081F7DB5E2002ACE6E /* FilterVideoType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilterVideoType.m; sourceTree = "<group>"; };
+		5F0823091F7DB5E3002ACE6E /* VideoInfomation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoInfomation.h; sourceTree = "<group>"; };
+		5F08230A1F7DB5E4002ACE6E /* VideoInfomation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoInfomation.m; sourceTree = "<group>"; };
+		5F0823121F7DB614002ACE6E /* SBView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBView.m; sourceTree = "<group>"; };
+		5F0823131F7DB614002ACE6E /* TitleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleViewController.h; sourceTree = "<group>"; };
+		5F0823141F7DB614002ACE6E /* SBAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBAlertView.m; sourceTree = "<group>"; };
+		5F0823151F7DB614002ACE6E /* SBOpenURLWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SBOpenURLWindowController.xib; sourceTree = "<group>"; };
+		5F0823161F7DB615002ACE6E /* SBOpenURLWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBOpenURLWindowController.h; sourceTree = "<group>"; };
+		5F0823171F7DB615002ACE6E /* SBPlaylistItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBPlaylistItem.h; sourceTree = "<group>"; };
+		5F0823181F7DB615002ACE6E /* SBPlaylistItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBPlaylistItem.m; sourceTree = "<group>"; };
+		5F0823191F7DB615002ACE6E /* ToolViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToolViewController.xib; sourceTree = "<group>"; };
+		5F08231A1F7DB616002ACE6E /* ColorPanelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorPanelViewController.xib; sourceTree = "<group>"; };
+		5F08231B1F7DB616002ACE6E /* SBPlayerIconView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SBPlayerIconView.xib; sourceTree = "<group>"; };
+		5F08231C1F7DB616002ACE6E /* NSView+Moveable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSView+Moveable.m"; sourceTree = "<group>"; };
+		5F08231D1F7DB617002ACE6E /* SBPlayerIconView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBPlayerIconView.h; sourceTree = "<group>"; };
+		5F08231E1F7DB617002ACE6E /* ColorPanelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPanelViewController.m; sourceTree = "<group>"; };
+		5F08231F1F7DB618002ACE6E /* TitleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleViewController.m; sourceTree = "<group>"; };
+		5F0823201F7DB619002ACE6E /* ColorPanelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPanelViewController.h; sourceTree = "<group>"; };
+		5F0823211F7DB619002ACE6E /* NSView+Moveable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSView+Moveable.h"; sourceTree = "<group>"; };
+		5F0823221F7DB61A002ACE6E /* SBOpenURLWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBOpenURLWindowController.m; sourceTree = "<group>"; };
+		5F0823231F7DB61A002ACE6E /* ToolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolViewController.h; sourceTree = "<group>"; };
+		5F0823241F7DB61B002ACE6E /* ToolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolViewController.m; sourceTree = "<group>"; };
+		5F0823251F7DB61B002ACE6E /* TitleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleViewController.xib; sourceTree = "<group>"; };
+		5F0823261F7DB61C002ACE6E /* SBAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBAlertView.h; sourceTree = "<group>"; };
+		5F0823271F7DB61C002ACE6E /* SBView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBView.h; sourceTree = "<group>"; };
+		5F0823281F7DB61C002ACE6E /* SBPlayerIconView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBPlayerIconView.m; sourceTree = "<group>"; };
+		5F08232A1F7DB653002ACE6E /* VideoPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoPlayerViewController.h; sourceTree = "<group>"; };
+		5F08232B1F7DB654002ACE6E /* VideoPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerViewController.m; sourceTree = "<group>"; };
+		5F08232C1F7DB688002ACE6E /* Document.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
+		5F08232D1F7DB689002ACE6E /* CommonHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonHeader.h; sourceTree = "<group>"; };
+		5F08232E1F7DB689002ACE6E /* Document.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
+		5F0823301F7DB6F1002ACE6E /* VideoPlayerWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoPlayerWindowController.h; sourceTree = "<group>"; };
+		5F0823311F7DB6F1002ACE6E /* VideoPlayerWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerWindowController.m; sourceTree = "<group>"; };
+		5F0823331F7DB761002ACE6E /* VideoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoController.h; sourceTree = "<group>"; };
+		5F0823341F7DB761002ACE6E /* VideoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoController.m; sourceTree = "<group>"; };
+		5F0823391F7DC27C002ACE6E /* VLCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VLCKit.framework; sourceTree = "<group>"; };
+		5F08234A1F7DF965002ACE6E /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		5F11EA981F7E1EC400D2A57F /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		5F7694781F7AF077004AB34D /* DeviceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceList.swift; sourceTree = "<group>"; };
 		5FF1807F1F7AC7F0003E2C06 /* ScreenCap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenCap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FF180821F7AC7F0003E2C06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FF180841F7AC7F0003E2C06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +144,18 @@
 		5FF1809C1F7AC7F0003E2C06 /* ScreenCapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenCapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FF180A01F7AC7F0003E2C06 /* ScreenCapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCapUITests.swift; sourceTree = "<group>"; };
 		5FF180A21F7AC7F0003E2C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FF180AF1F7ACA07003E2C06 /* Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
+		5FF180B11F7ACED9003E2C06 /* ScreenCap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ScreenCap-Bridging-Header.h"; sourceTree = "<group>"; };
+		5FF180B21F7ACED9003E2C06 /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		5FF180B31F7ACED9003E2C06 /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		688254F7FC15B2A2604F3C86 /* Pods-ScreenCap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenCap.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScreenCap/Pods-ScreenCap.release.xcconfig"; sourceTree = "<group>"; };
+		701BD0F2417FCBCE7E6F7D61 /* Pods_ScreenCapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScreenCapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		972DA5AD112C9D59837186C4 /* Pods-ScreenCapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenCapTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScreenCapTests/Pods-ScreenCapTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A3B7806D7D3C3E01D40B6DB /* Pods_ScreenCap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScreenCap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF68A1CE5C1799997FD5BFC2 /* Pods-ScreenCapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenCapUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScreenCapUITests/Pods-ScreenCapUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CD81C3D8124F23CEDCBCCBA7 /* Pods-ScreenCapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenCapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScreenCapTests/Pods-ScreenCapTests.release.xcconfig"; sourceTree = "<group>"; };
+		D69AA02AFB9A547860B542AF /* Pods-ScreenCapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenCapUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScreenCapUITests/Pods-ScreenCapUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E8A7C8AF2514CE4595171537 /* Pods-ScreenCap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenCap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScreenCap/Pods-ScreenCap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +163,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F0823471F7DE6F7002ACE6E /* VLCKit.framework in Frameworks */,
+				28FDA796FF12AE74D1B0FF7C /* Pods_ScreenCap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23B78A2A50E5603533AFFE23 /* Pods_ScreenCapTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,19 +180,103 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E474CCCCEA727147F8574AB5 /* Pods_ScreenCapUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F08222C1F7DB4EC002ACE6E /* ThirdPartLib */ = {
+			isa = PBXGroup;
+			children = (
+				5F08222D1F7DB4EC002ACE6E /* ISSoundAdditions.h */,
+				5F08222E1F7DB4EC002ACE6E /* ISSoundAdditions.m */,
+			);
+			path = ThirdPartLib;
+			sourceTree = "<group>";
+		};
+		5F0823101F7DB5EB002ACE6E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5F0823011F7DB5DD002ACE6E /* SBApplication.h */,
+				5F0823021F7DB5DD002ACE6E /* SBApplication.m */,
+				5F0823031F7DB5DE002ACE6E /* FilterVideoType.h */,
+				5F0823081F7DB5E2002ACE6E /* FilterVideoType.m */,
+				5F0823051F7DB5DF002ACE6E /* Tools.h */,
+				5F0823041F7DB5DF002ACE6E /* Tools.m */,
+				5F0823061F7DB5E0002ACE6E /* URLAsset.h */,
+				5F0823071F7DB5E1002ACE6E /* URLAsset.m */,
+				5F0823091F7DB5E3002ACE6E /* VideoInfomation.h */,
+				5F08230A1F7DB5E4002ACE6E /* VideoInfomation.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5F0823111F7DB60C002ACE6E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5F0823201F7DB619002ACE6E /* ColorPanelViewController.h */,
+				5F08231E1F7DB617002ACE6E /* ColorPanelViewController.m */,
+				5F08231A1F7DB616002ACE6E /* ColorPanelViewController.xib */,
+				5F0823211F7DB619002ACE6E /* NSView+Moveable.h */,
+				5F08231C1F7DB616002ACE6E /* NSView+Moveable.m */,
+				5F0823261F7DB61C002ACE6E /* SBAlertView.h */,
+				5F0823141F7DB614002ACE6E /* SBAlertView.m */,
+				5F0823161F7DB615002ACE6E /* SBOpenURLWindowController.h */,
+				5F0823221F7DB61A002ACE6E /* SBOpenURLWindowController.m */,
+				5F0823151F7DB614002ACE6E /* SBOpenURLWindowController.xib */,
+				5F08231D1F7DB617002ACE6E /* SBPlayerIconView.h */,
+				5F0823281F7DB61C002ACE6E /* SBPlayerIconView.m */,
+				5F08231B1F7DB616002ACE6E /* SBPlayerIconView.xib */,
+				5F0823171F7DB615002ACE6E /* SBPlaylistItem.h */,
+				5F0823181F7DB615002ACE6E /* SBPlaylistItem.m */,
+				5F0823271F7DB61C002ACE6E /* SBView.h */,
+				5F0823121F7DB614002ACE6E /* SBView.m */,
+				5F0823131F7DB614002ACE6E /* TitleViewController.h */,
+				5F08231F1F7DB618002ACE6E /* TitleViewController.m */,
+				5F0823251F7DB61B002ACE6E /* TitleViewController.xib */,
+				5F0823231F7DB61A002ACE6E /* ToolViewController.h */,
+				5F0823241F7DB61B002ACE6E /* ToolViewController.m */,
+				5F0823191F7DB615002ACE6E /* ToolViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5F0823291F7DB649002ACE6E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5F08232A1F7DB653002ACE6E /* VideoPlayerViewController.h */,
+				5F08232B1F7DB654002ACE6E /* VideoPlayerViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5F0823381F7DB798002ACE6E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		5FF180761F7AC7F0003E2C06 = {
 			isa = PBXGroup;
 			children = (
+				5F0823391F7DC27C002ACE6E /* VLCKit.framework */,
+				5F0823291F7DB649002ACE6E /* View Controllers */,
+				5F0823111F7DB60C002ACE6E /* Views */,
+				5F0823101F7DB5EB002ACE6E /* Models */,
+				5FF180B21F7ACED9003E2C06 /* Test.h */,
+				5FF180B31F7ACED9003E2C06 /* Test.m */,
+				5F0823381F7DB798002ACE6E /* Supporting Files */,
+				5F08222C1F7DB4EC002ACE6E /* ThirdPartLib */,
 				5FF180811F7AC7F0003E2C06 /* ScreenCap */,
 				5FF180941F7AC7F0003E2C06 /* ScreenCapTests */,
 				5FF1809F1F7AC7F0003E2C06 /* ScreenCapUITests */,
 				5FF180801F7AC7F0003E2C06 /* Products */,
+				B3B4C9D6D5CB20323BFC2ECF /* Pods */,
+				F28C294B78A239B89AED69E7 /* Frameworks */,
+				5FF180B11F7ACED9003E2C06 /* ScreenCap-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,9 +293,20 @@
 		5FF180811F7AC7F0003E2C06 /* ScreenCap */ = {
 			isa = PBXGroup;
 			children = (
+				5F08234A1F7DF965002ACE6E /* Test.swift */,
+				5F0823301F7DB6F1002ACE6E /* VideoPlayerWindowController.h */,
+				5F0823311F7DB6F1002ACE6E /* VideoPlayerWindowController.m */,
+				5F08232C1F7DB688002ACE6E /* Document.h */,
+				5F08232E1F7DB689002ACE6E /* Document.m */,
+				5F08232D1F7DB689002ACE6E /* CommonHeader.h */,
+				5FF180AF1F7ACA07003E2C06 /* Recorder.swift */,
+				5F7694781F7AF077004AB34D /* DeviceList.swift */,
 				5FF180821F7AC7F0003E2C06 /* AppDelegate.swift */,
+				5F0823331F7DB761002ACE6E /* VideoController.h */,
+				5F0823341F7DB761002ACE6E /* VideoController.m */,
 				5FF180841F7AC7F0003E2C06 /* ViewController.swift */,
 				5FF180861F7AC7F0003E2C06 /* Assets.xcassets */,
+				5F11EA981F7E1EC400D2A57F /* MainMenu.xib */,
 				5FF180881F7AC7F0003E2C06 /* Main.storyboard */,
 				5FF1808B1F7AC7F0003E2C06 /* Info.plist */,
 				5FF1808C1F7AC7F0003E2C06 /* ScreenCap.entitlements */,
@@ -124,6 +332,29 @@
 			path = ScreenCapUITests;
 			sourceTree = "<group>";
 		};
+		B3B4C9D6D5CB20323BFC2ECF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8A7C8AF2514CE4595171537 /* Pods-ScreenCap.debug.xcconfig */,
+				688254F7FC15B2A2604F3C86 /* Pods-ScreenCap.release.xcconfig */,
+				972DA5AD112C9D59837186C4 /* Pods-ScreenCapTests.debug.xcconfig */,
+				CD81C3D8124F23CEDCBCCBA7 /* Pods-ScreenCapTests.release.xcconfig */,
+				D69AA02AFB9A547860B542AF /* Pods-ScreenCapUITests.debug.xcconfig */,
+				BF68A1CE5C1799997FD5BFC2 /* Pods-ScreenCapUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F28C294B78A239B89AED69E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A3B7806D7D3C3E01D40B6DB /* Pods_ScreenCap.framework */,
+				701BD0F2417FCBCE7E6F7D61 /* Pods_ScreenCapTests.framework */,
+				37033674376E028EDFD803AB /* Pods_ScreenCapUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,9 +362,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FF180A51F7AC7F0003E2C06 /* Build configuration list for PBXNativeTarget "ScreenCap" */;
 			buildPhases = (
+				AD5F4672490E6755D919A8F7 /* [CP] Check Pods Manifest.lock */,
 				5FF1807B1F7AC7F0003E2C06 /* Sources */,
 				5FF1807C1F7AC7F0003E2C06 /* Frameworks */,
 				5FF1807D1F7AC7F0003E2C06 /* Resources */,
+				EC530E8C11551547BCC3BB74 /* [CP] Embed Pods Frameworks */,
+				91689B1EE258D135B897EB6B /* [CP] Copy Pods Resources */,
+				5FF180AE1F7AC870003E2C06 /* ShellScript */,
+				5F0823491F7DE6F7002ACE6E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,9 +384,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FF180A81F7AC7F0003E2C06 /* Build configuration list for PBXNativeTarget "ScreenCapTests" */;
 			buildPhases = (
+				85A9870EF1130928AFCC47D2 /* [CP] Check Pods Manifest.lock */,
 				5FF1808D1F7AC7F0003E2C06 /* Sources */,
 				5FF1808E1F7AC7F0003E2C06 /* Frameworks */,
 				5FF1808F1F7AC7F0003E2C06 /* Resources */,
+				23FADB4D9C6B7943EE7734F8 /* [CP] Embed Pods Frameworks */,
+				08C45CA86032F0DC1CA398A6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -166,9 +405,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FF180AB1F7AC7F0003E2C06 /* Build configuration list for PBXNativeTarget "ScreenCapUITests" */;
 			buildPhases = (
+				20838377B9E242D57CA8FC37 /* [CP] Check Pods Manifest.lock */,
 				5FF180981F7AC7F0003E2C06 /* Sources */,
 				5FF180991F7AC7F0003E2C06 /* Frameworks */,
 				5FF1809A1F7AC7F0003E2C06 /* Resources */,
+				EE56B64034956269D7444901 /* [CP] Embed Pods Frameworks */,
+				B028CB175DFDB707075E978A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,6 +434,7 @@
 				TargetAttributes = {
 					5FF1807E1F7AC7F0003E2C06 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					5FF180901F7AC7F0003E2C06 = {
@@ -213,6 +456,12 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
+				es,
+				fr,
+				ja,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 5FF180761F7AC7F0003E2C06;
 			productRefGroup = 5FF180801F7AC7F0003E2C06 /* Products */;
@@ -233,6 +482,12 @@
 			files = (
 				5FF180871F7AC7F0003E2C06 /* Assets.xcassets in Resources */,
 				5FF1808A1F7AC7F0003E2C06 /* Main.storyboard in Resources */,
+				5F11EA911F7E075D00D2A57F /* SBOpenURLWindowController.xib in Resources */,
+				5F11EA991F7E1F3200D2A57F /* MainMenu.xib in Resources */,
+				5F11EA931F7E076200D2A57F /* TitleViewController.xib in Resources */,
+				5F11EA941F7E076400D2A57F /* ToolViewController.xib in Resources */,
+				5F11EA921F7E075F00D2A57F /* SBPlayerIconView.xib in Resources */,
+				5F11EA901F7E075100D2A57F /* ColorPanelViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,11 +507,186 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		08C45CA86032F0DC1CA398A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScreenCapTests/Pods-ScreenCapTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20838377B9E242D57CA8FC37 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		23FADB4D9C6B7943EE7734F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScreenCapTests/Pods-ScreenCapTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FF180AE1F7AC870003E2C06 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 73cc3f18e2d9e92dd6e8d0333ed9139f94b28f7b 92249bff823b6e77f03ba6ca66ef011f96af74be0e8e24f9cf4bbddf467dd039";
+		};
+		85A9870EF1130928AFCC47D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		91689B1EE258D135B897EB6B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScreenCap/Pods-ScreenCap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD5F4672490E6755D919A8F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B028CB175DFDB707075E978A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScreenCapUITests/Pods-ScreenCapUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC530E8C11551547BCC3BB74 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScreenCap/Pods-ScreenCap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE56B64034956269D7444901 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScreenCapUITests/Pods-ScreenCapUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5FF1807B1F7AC7F0003E2C06 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F11EA951F7E141900D2A57F /* VideoPlayerWindowController.m in Sources */,
+				5F08233C1F7DE5D2002ACE6E /* VideoPlayerViewController.m in Sources */,
+				5F08233D1F7DE5D2002ACE6E /* ColorPanelViewController.m in Sources */,
+				5F08233E1F7DE5D2002ACE6E /* NSView+Moveable.m in Sources */,
+				5F08233F1F7DE5D2002ACE6E /* SBAlertView.m in Sources */,
+				5F0823401F7DE5D2002ACE6E /* SBOpenURLWindowController.m in Sources */,
+				5F0823411F7DE5D2002ACE6E /* SBPlayerIconView.m in Sources */,
+				5F0823421F7DE5D2002ACE6E /* SBPlaylistItem.m in Sources */,
+				5F11EA971F7E187700D2A57F /* ISSoundAdditions.m in Sources */,
+				5F11EA961F7E141900D2A57F /* Document.m in Sources */,
+				5F08230B1F7DB5E4002ACE6E /* SBApplication.m in Sources */,
+				5F08230E1F7DB5E4002ACE6E /* FilterVideoType.m in Sources */,
+				5F08230C1F7DB5E4002ACE6E /* Tools.m in Sources */,
+				5F08230D1F7DB5E4002ACE6E /* URLAsset.m in Sources */,
+				5FF180B41F7ACED9003E2C06 /* Test.m in Sources */,
+				5F08230F1F7DB5E4002ACE6E /* VideoInfomation.m in Sources */,
+				5F0823431F7DE5D2002ACE6E /* SBView.m in Sources */,
+				5F0823441F7DE5D2002ACE6E /* TitleViewController.m in Sources */,
+				5F0823451F7DE5D2002ACE6E /* ToolViewController.h in Sources */,
+				5F08234B1F7DF965002ACE6E /* Test.swift in Sources */,
+				5F0823461F7DE5D2002ACE6E /* ToolViewController.m in Sources */,
+				5F7694791F7AF077004AB34D /* DeviceList.swift in Sources */,
+				5FF180B01F7ACA07003E2C06 /* Recorder.swift in Sources */,
+				5F0823351F7DB761002ACE6E /* VideoController.m in Sources */,
 				5FF180851F7AC7F0003E2C06 /* ViewController.swift in Sources */,
 				5FF180831F7AC7F0003E2C06 /* AppDelegate.swift in Sources */,
 			);
@@ -413,38 +843,64 @@
 		};
 		5FF180A61F7AC7F0003E2C06 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8A7C8AF2514CE4595171537 /* Pods-ScreenCap.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ScreenCap/ScreenCap.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3XSPEUHQ6Y;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ScreenCap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.paubins.ScreenCap;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paubins.VideoJournal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ScreenCap-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		5FF180A71F7AC7F0003E2C06 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 688254F7FC15B2A2604F3C86 /* Pods-ScreenCap.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ScreenCap/ScreenCap.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3XSPEUHQ6Y;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ScreenCap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.paubins.ScreenCap;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paubins.VideoJournal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ScreenCap-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
 		5FF180A91F7AC7F0003E2C06 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 972DA5AD112C9D59837186C4 /* Pods-ScreenCapTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -462,6 +918,7 @@
 		};
 		5FF180AA1F7AC7F0003E2C06 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD81C3D8124F23CEDCBCCBA7 /* Pods-ScreenCapTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -479,6 +936,7 @@
 		};
 		5FF180AC1F7AC7F0003E2C06 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D69AA02AFB9A547860B542AF /* Pods-ScreenCapUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -495,6 +953,7 @@
 		};
 		5FF180AD1F7AC7F0003E2C06 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF68A1CE5C1799997FD5BFC2 /* Pods-ScreenCapUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
