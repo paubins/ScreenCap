@@ -7,3 +7,4 @@
 #import "VideoPlayerWindowController.h"
 #import "VideoPlayerViewController.h"
 #import "ISSoundAdditions.h"
+#import "MiniBrowserWindowController.h"

@@ -22,4 +22,6 @@
 @property (nonatomic,strong) NSData *urlData;
 //@property (nonatomic,assign) int id;
 
+- (NSString *)getPathFromURL;
+
 @end

@@ -14,21 +14,21 @@
 @implementation Tools
 
 +(NSString *)getVideoNameByPath:(NSString *)path{
-    NSArray *allStrArr = [path componentsSeparatedByString:@"/"];
+    NSArray *allStrArr = [path pathComponents];
     NSString *resultStr = allStrArr.lastObject;
     resultStr = resultStr.lastPathComponent;
     resultStr = [resultStr stringByDeletingPathExtension];
     return resultStr;
 }
-+(NSString *)getVideoNameWithPathExtensionByPath:(NSString *)path{
-    NSArray *allStrArr = [path componentsSeparatedByString:@"/"];
++(NSString *)getVideoNameWithPathExtensionByPath:(NSString *)path {
+    NSArray *allStrArr = [path pathComponents];
     NSString *resultStr = allStrArr.lastObject;
     resultStr = resultStr.lastPathComponent;
     return resultStr;
 }
 +(NSString *)getVideoFileSizeInfoByPath:(NSString *)path{
     NSError *error = nil;
-    NSDictionary *dic = [[NSFileManager defaultManager]attributesOfItemAtPath:path error:&error];
+    NSDictionary *dic = [[NSFileManager defaultManager] attributesOfItemAtPath:path error:&error];
     if (error) {
         NSLog(@"GetFileSizeError:%@",error);
         return @"__M ";

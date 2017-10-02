@@ -41,10 +41,10 @@
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     [_whiteLine layoutSubtreeIfNeeded];
-    self.title.usesSingleLineMode = NO;
-    self.title.cell.wraps = YES;
+    self.title.usesSingleLineMode = YES;
+    self.title.cell.wraps = NO;
     self.title.cell.scrollable = NO;
-    self.title.maximumNumberOfLines = 2;
+    self.title.maximumNumberOfLines = 1;
     NSTrackingArea *trackingArea = [[NSTrackingArea alloc]initWithRect:dirtyRect options:NSTrackingMouseEnteredAndExited|NSTrackingActiveAlways owner:self userInfo:nil];
     [self addTrackingArea:trackingArea];
     //设置删除按钮
@@ -65,6 +65,10 @@
         }
     }
 }
+- (IBAction)uploadAndShare:(id)sender {
+    
+}
+
 //失效视图
 -(NSImageView *)disableView{
     if (!_disableView) {

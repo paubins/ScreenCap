@@ -15,6 +15,9 @@
 -(void)sbPlaylistItemDeleteCurrentItem:(SBPlaylistItem *)item;
 @end
 @interface SBPlaylistItem : NSTableCellView
+
+@property (weak) IBOutlet NSButtonCell *uploadShareButton;
+
 //视频标题
 @property (weak) IBOutlet NSTextField *title;
 //总时间

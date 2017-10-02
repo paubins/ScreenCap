@@ -79,6 +79,9 @@ static CGFloat forwardRatio = 1;
 -(void)awakeFromNib
 {
     [super awakeFromNib];
+    
+//    [self view].translatesAutoresizingMaskIntoConstraints = NO;
+    
     //初始化播放器颜色
     [self addVisualEffectViewWithMaterial:NSVisualEffectMaterialDark];
     NSNumber *materialNumber = [[NSUserDefaults standardUserDefaults]objectForKey:@"material"];
@@ -900,9 +903,12 @@ NSTimer *leftSplitTimer;
         aVideoInfo.url = path;
         aVideoInfo.title = [Tools getVideoNameWithPathExtensionByPath:path];
         URLAsset *totalTimeAsset = [[URLAsset alloc]init];
-        NSURL *tmpURL = [[NSURL alloc]initFileURLWithPath:path];
+        
+        NSString *newPath = [NSString stringWithFormat:@"%@", path];
+        NSURL *tmpURL = [NSURL URLWithString:newPath];
+        
         aVideoInfo.totalTime =  [totalTimeAsset getTotalTimeFromUrl:tmpURL];
-        aVideoInfo.size = [Tools getVideoFileSizeInfoByPath:path];
+//        aVideoInfo.size = [Tools getVideoFileSizeInfoByPath:path];
         aVideoInfo.urlData = [tmpURL bookmarkDataWithOptions:NSURLBookmarkCreationWithSecurityScope includingResourceValuesForKeys:nil relativeToURL:nil error:nil];
         if (aVideoInfo.urlData == nil) {
             aVideoInfo.urlData = [tmpURL bookmarkDataWithOptions:NSURLBookmarkCreationWithSecurityScope includingResourceValuesForKeys:nil relativeToURL:nil error:nil];
@@ -961,12 +967,12 @@ NSTimer *leftSplitTimer;
     
     RLMResults *result = [VideoInfomation allObjectsInRealm:REALM];
     VideoInfomation *aVideo = result[row];
-    item.size.stringValue = aVideo.size;
+//    item.size.stringValue = aVideo.size;
     item.title.stringValue = aVideo.title;
     item.totalTime.stringValue = aVideo.totalTime;
-    NSURL *tmpURL = [NSURL URLByResolvingBookmarkData:aVideo.urlData options:NSURLBookmarkResolutionWithSecurityScope|NSURLBookmarkResolutionWithoutUI relativeToURL:nil bookmarkDataIsStale:nil error:nil];
-    item.url = tmpURL;
-    item.isItemAvailable = [[NSFileManager defaultManager]fileExistsAtPath:aVideo.url];
+//    NSURL *tmpURL = [NSURL URLByResolvingBookmarkData:aVideo.urlData options:NSURLBookmarkResolutionWithSecurityScope|NSURLBookmarkResolutionWithoutUI relativeToURL:nil bookmarkDataIsStale:nil error:nil];
+    item.url = [[NSURL alloc] initWithString:aVideo.url];
+    item.isItemAvailable = [[NSFileManager defaultManager] fileExistsAtPath:[aVideo getPathFromURL]];
     item.wantsLayer = YES;
     item.layer.backgroundColor = [NSColor clearColor].CGColor;
     if (![self.movie.url.relativePath isEqualToString:@""]) {
@@ -988,7 +994,7 @@ NSTimer *leftSplitTimer;
 }
 
 //双击NSTableView Row的响应事件
--(void)doubleClickTableViewRow:(NSTableView *)tableView{
+-(void)doubleClickTableViewRow:(NSTableView *)tableView {
     [SBApplication share].isDoubleClickOpen = NO;
     if (tableView.selectedRow == -1) return;
     SBPlaylistItem *item = [tableView viewAtColumn:0 row:tableView.selectedRow makeIfNecessary:YES];
@@ -1002,11 +1008,12 @@ NSTimer *leftSplitTimer;
     REALM.autorefresh = YES;
     RLMResults *tmpArray = [VideoInfomation allObjectsInRealm:REALM];
     for (VideoInfomation *aVideo in tmpArray) {
-        if ([aVideo.url isEqualToString:item.url.relativePath]) {
+        if ([aVideo.url isEqualToString:item.url.absoluteString]) {
             [REALM transactionWithBlock:^{
                 [REALM deleteObject:aVideo];
                 [REALM commitWriteTransaction];
                 [self.tableView reloadData];
+                [self removeVideoAndInitPlayer];
             }];
             break;
         }else{
@@ -1015,6 +1022,7 @@ NSTimer *leftSplitTimer;
                     [REALM deleteObject:aVideo];
                     [REALM commitWriteTransaction];
                     [self.tableView reloadData];
+                    [self removeVideoAndInitPlayer];
                 }];
             }
         }
@@ -1204,36 +1212,3 @@ NSButton *fastBtn;
 
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

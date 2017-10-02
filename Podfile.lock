@@ -1,37 +1,70 @@
 PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - Alamofire (4.5.0)
+  - Base64 (1.1.2)
   - Cartography (2.0.0)
   - Crashlytics (3.8.5):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.12)
   - Masonry (1.0.2)
+  - MASPreferences (1.3)
   - Realm (2.8.3):
     - Realm/Headers (= 2.8.3)
   - Realm/Headers (2.8.3)
+  - TMCache (2.1.0)
 
 DEPENDENCIES:
+  - AFNetworking
+  - Alamofire
+  - Base64
   - Cartography (from `git@github.com:robb/Cartography.git`, branch `master`)
   - Crashlytics
   - Fabric
   - Masonry
+  - MASPreferences (from `git@github.com:shpakovski/MASPreferences.git`, branch `master`)
   - Realm
+  - TMCache
 
 EXTERNAL SOURCES:
   Cartography:
     :branch: master
     :git: git@github.com:robb/Cartography.git
+  MASPreferences:
+    :branch: master
+    :git: git@github.com:shpakovski/MASPreferences.git
 
 CHECKOUT OPTIONS:
   Cartography:
     :commit: 6b1e8755ab4e1209dbde03ea0b2e04875ccd72fb
     :git: git@github.com:robb/Cartography.git
+  MASPreferences:
+    :commit: 45e5ff67d19babc53414970b0a5db9586a494a96
+    :git: git@github.com:shpakovski/MASPreferences.git
 
 SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  Base64: cecfb41a004124895a7bcee567a89bae5a89d49b
   Cartography: 626358af52394115799d10d5ad03d6a5872239c9
   Crashlytics: dfbae35ef22ca189240d230ad501feea4ee85d2d
   Fabric: f050464eac45a2ce5a8e6e6a07e977c0df32fe28
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MASPreferences: c08b8622dd17b47da87669e741efd7c92e970e8c
   Realm: 3601ef091c8c499a31101d8563b991e75546cdce
+  TMCache: 95ebcc9b3c7e90fb5fd8fc3036cba3aa781c9bed
 
-PODFILE CHECKSUM: 5817d0c37b9c54e23c6407c81fb95d7eaa315e12
+PODFILE CHECKSUM: fe40356a15fc06f337c42504424342d37ffe5072
 
 COCOAPODS: 1.2.1

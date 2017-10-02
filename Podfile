@@ -10,6 +10,11 @@ target 'ScreenCap' do
   pod 'Crashlytics'
   pod 'Masonry'
   pod 'Realm'
+  pod 'Alamofire'
+  pod 'AFNetworking'
+  pod 'Base64'
+  pod 'MASPreferences', :git => 'git@github.com:shpakovski/MASPreferences.git', :branch => 'master'
+  pod 'TMCache'
 
   # Pods for ScreenCap
 

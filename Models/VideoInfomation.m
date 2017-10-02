@@ -15,4 +15,9 @@
 //+(NSString *)primaryKey{
 //    return @"id";
 //}
+
+- (NSString *)getPathFromURL {
+    return [[[NSURL alloc] initWithString:self.url] path];
+}
+
 @end
