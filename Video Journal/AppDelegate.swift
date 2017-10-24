@@ -13,19 +13,25 @@ import MASPreferences
 import TMCache
 import Carbon
 import AVFoundation
+import Realm
+import SwiftyDropbox
 
 var appDelegate: NSObject?
 
 var statusItem: NSStatusItem!
 
 @NSApplicationMain
-@objc public class AppDelegate: NSObject, NSApplicationDelegate {
+@objc public class AppDelegate: NSObject, NSApplicationDelegate  {
     
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var cacheImageMenu: NSMenu!
     @IBOutlet weak var autoUpItem: NSMenuItem!
     @IBOutlet weak var uploadMenuItem: NSMenuItem!
     @IBOutlet weak var cacheImageMenuItem: NSMenuItem!
+    
+    @objc var isUploading:Bool = false
+    
+    @IBOutlet weak var loginButton: NSMenuItem!
     
     let pasteboardObserver = PasteboardObserver()
     lazy var preferencesWindowController: NSWindowController = {
@@ -56,14 +62,16 @@ var statusItem: NSStatusItem!
     // Replace NSVariableStatusItemLength with an integer for a fixed width (in pixels)
 //    var statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     
-    lazy var videoPlayerWindowController:VideoPlayerWindowController = {
+    var videoPlayerWindowController:VideoPlayerWindowController = {
         let storyBoard:NSStoryboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
         let windowController:VideoPlayerWindowController = storyBoard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "VideoPlayerWindowController")) as! VideoPlayerWindowController
+        
+        (windowController.contentViewController as! VideoPlayerViewController).initPlaylistTableView()
         
         return windowController
     }()
     
-    lazy var browser:MiniBrowserWindowController = {
+    lazy var browser:MiniBrowserWindowController! = {
         return MiniBrowserWindowController()
     }()
     
@@ -75,8 +83,19 @@ var statusItem: NSStatusItem!
 
 //        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(AppDelegate.update), userInfo: nil, repeats: true)
         
+        DropboxClientsManager.setupWithAppKeyDesktop("q77juuozb6wjd2q")
+        
+        NSAppleEventManager.shared().setEventHandler(self,
+                                                     andSelector: #selector(handleGetURLEvent),
+                                                     forEventClass: AEEventClass(kInternetEventClass),
+                                                     andEventID: AEEventID(kAEGetURL))
+        
         registerHotKeys()
         initApp()
+        
+        if let client = DropboxClientsManager.authorizedClient {
+            self.loginButton.title = "Logout of Dropbox..."
+        }
     }
 
     public func applicationWillTerminate(_ aNotification: Notification) {
@@ -88,6 +107,7 @@ var statusItem: NSStatusItem!
         var appleEventManager = NSAppleEventManager.shared()
         // 1
         appleEventManager.setEventHandler(self, andSelector: Selector("handleAppleEvent:withReplyEvent:"), forEventClass: AEEventClass(kInternetEventClass), andEventID: AEEventID(kAEGetURL))
+        
     }
 
     public func application(_ sender: NSApplication, openFile filename: String) -> Bool {
@@ -125,14 +145,7 @@ var statusItem: NSStatusItem!
     }
     
     public func applicationDockMenu(_ sender: NSApplication) -> NSMenu? {
-        
         let dockMenu: NSMenu? = NSMenu()
-//        dockMenu?.addItem(withTitle: NSLocalizedString("Play/Pause", comment: ""),
-//                          action: #selector(self.videoController.playOrPause), keyEquivalent: "")
-//
-//        dockMenu?.addItem(withTitle: NSLocalizedString("Next", comment: ""),
-//                          action: #selector(self.videoController.nextVideo), keyEquivalent: "")
-        
         return dockMenu
     }
     
@@ -163,10 +176,9 @@ var statusItem: NSStatusItem!
         let submenu:NSMenu = NSMenu()
         
         for (i, device) in DeviceList.audio().enumerated() {
-            var menuItem:NSMenuItem!
+            var menuItem:NSMenuItem = NSMenuItem(title: device["name"]!, action: #selector(changeAudio), keyEquivalent: device["name"]!)
             
             if i == 0 {
-                menuItem = NSMenuItem(title: device["name"]!, action: #selector(changeAudio), keyEquivalent: device["name"]!)
                 menuItem.state = .on
             }
 
@@ -174,6 +186,9 @@ var statusItem: NSStatusItem!
         }
         
         self.audioDevices.submenu = submenu
+//
+//        self.videoController.mainWindowController = self.videoPlayerWindowController;
+//        self.videoController.mainWindowController.window?.makeKeyAndOrderFront(self)
     }
 
     @IBAction func showHistory(_ sender: Any) {
@@ -208,7 +223,11 @@ var statusItem: NSStatusItem!
         
         self.videoController.mainWindowController = self.videoPlayerWindowController;
         SBApplication.share().filePaths = [self.fileOutput.absoluteString]
-        (self.videoPlayerWindowController.contentViewController as! VideoPlayerViewController).sbViewGetFileURL((self.fileOutput as NSURL) as URL!)
+        
+        if (!self.isUploading) {
+            (self.videoPlayerWindowController.contentViewController as! VideoPlayerViewController).sbViewGetFileURL((self.fileOutput as NSURL) as URL!)
+        }
+
         (self.videoPlayerWindowController.contentViewController as! VideoPlayerViewController).playlistDataAddToDatabase()
         
         self.videoController.mainWindowController.window?.makeKeyAndOrderFront(self)
@@ -230,6 +249,12 @@ var statusItem: NSStatusItem!
         
         // Replace the title of the item in the status bar
         statusItem.title = "⏳"+now
+    }
+    
+    @objc func showBrowser(title: String, url: String) {
+        self.browser.window?.makeKeyAndOrderFront(self)
+        self.browser.webView.mainFrameURL = url
+        self.browser.forceReload()
     }
     
     @objc func changeAudio(sender: NSMenuItem) {
@@ -260,11 +285,9 @@ var statusItem: NSStatusItem!
     }
     
     func temporaryFile() -> URL {
-        var paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.downloadsDirectory,
-                                                        FileManager.SearchPathDomainMask.userDomainMask, true)
-        
+        let directory = NSTemporaryDirectory()
         let datetime:Int = Int(Date.timeIntervalSinceReferenceDate)
-        return URL(fileURLWithPath: paths.first!).appendingPathComponent("vj_\(datetime).mp4")
+        return URL(fileURLWithPath: directory).appendingPathComponent("vj_\(datetime).mp4")
     }
     
     @objc func showMenu() {
@@ -299,9 +322,19 @@ var statusItem: NSStatusItem!
             ImageService.shared.uploadImg(pboard)
         // 设置
         case 2:
-            preferencesWindowController.showWindow(nil)
-            preferencesWindowController.window?.center()
-            NSApp.activate(ignoringOtherApps: true)
+            
+            if let client = DropboxClientsManager.authorizedClient {
+                DropboxClientsManager.unlinkClients()
+                self.loginButton.title = "Login with Dropbox..."
+            } else {
+                DropboxClientsManager.authorizeFromController(sharedWorkspace: NSWorkspace.shared,
+                                                              controller: self.videoPlayerWindowController.contentViewController,
+                                                              openURL: { (url: URL) -> Void in
+                                                                NSWorkspace.shared.open(url)
+                })
+                NSApp.activate(ignoringOtherApps: true)
+            }
+
         case 3:
             // 退出
             NSApp.terminate(nil)
@@ -330,6 +363,43 @@ var statusItem: NSStatusItem!
             break
         }
         
+    }
+    
+    @objc func handleGetURLEvent(_ event: NSAppleEventDescriptor?, replyEvent: NSAppleEventDescriptor?) {
+        if let aeEventDescriptor = event?.paramDescriptor(forKeyword: AEKeyword(keyDirectObject)) {
+            if let urlStr = aeEventDescriptor.stringValue {
+                let url = URL(string: urlStr)!
+                
+                let notification = NSUserNotification()
+                let notificationCenter = NSUserNotificationCenter.default
+                
+                if let authResult = DropboxClientsManager.handleRedirectURL(url) {
+                    switch authResult {
+                    case .success:
+                        print("Success! User is logged into Dropbox.")
+
+                        notificationCenter.delegate = appDelegate as? NSUserNotificationCenterDelegate
+                        notification.title = "Success!"
+                        notification.informativeText = "Success! You are now logged into Dropbox."
+                        notification.contentImage = NSImage(named: NSImage.Name(rawValue: "success"))
+                        notification.informativeText = "Success! You are now logged into Dropbox."
+                        notification.soundName = NSUserNotificationDefaultSoundName;
+                        
+                        self.loginButton.title = "Log out of Dropbox"
+                        
+                    case .cancel:
+                        print("Authorization flow was manually canceled by user!")
+                        notification.contentImage = NSImage(named: NSImage.Name(rawValue: "Failure"))
+                    case .error(_, let description):
+                        print("Error: \(description)")
+                    }
+                }
+                // this brings your application back the foreground on redirect
+                NSApp.activate(ignoringOtherApps: true)
+                
+                notificationCenter.scheduleNotification(notification)
+            }
+        }
     }
     
     @IBAction func btnClick(_ sender: NSButton) {
@@ -371,8 +441,55 @@ var statusItem: NSStatusItem!
         NotificationMessage("Image link is successful!", isSuccess: true)
     }
     
+    @objc func upload(fileURL: URL, progressHandler:  @escaping ((Double)->Void)) {
+        // Reference after programmatic auth flow
+        let client = DropboxClientsManager.authorizedClient
+        
+        client?.files.createFolderV2(path: "/vidjoco").response { (response, error) in
+            var shouldUpload:Bool = false
+            if let response = response {
+                print(response)
+                shouldUpload = true
+            } else if let error = error {
+                switch error as CallError {
+                case .routeError(let boxed, let userMessage, let errorSummary, let requestId):
+                    print("RouteError[\(requestId)]:")
+                    
+                    switch boxed.unboxed as Files.CreateFolderError {
+                    case .path(let writeError):
+                        switch writeError {
+                        case .conflict(let conflictError):
+                            print(conflictError.description)
+                            shouldUpload = true
+                        default:
+                            break
+                        }
+                    }
+                case .internalServerError(let code, let message, let requestId):
+                    print("Internal Error")
+                default:
+                    print("Unknown error")
+                }
+            }
+            
+            if (shouldUpload) {
+                let fileData:Data = FileManager.default.contents(atPath: fileURL.path)!
+                
+                let request = client?.files.upload(path: "/vidjoco/\(fileURL.lastPathComponent)", input: fileData)
+                    .response { response, error in
+                        if let response = response {
+                            print(response)
+                        } else if let error = error {
+                            print(error)
+                        }
+                    }
+                    .progress { progressData in
+                        progressHandler(progressData.fractionCompleted)
+                }
+            }
+        }
+    }
 }
-
 
 
 extension AppDelegate: NSUserNotificationCenterDelegate, PasteboardObserverSubscriber {

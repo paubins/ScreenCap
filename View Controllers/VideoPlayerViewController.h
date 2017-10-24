@@ -55,5 +55,7 @@
 -(void)volumeUp;
 //声音减
 -(void)volumeDown;
+
+-(void)initPlaylistTableView;
 @end
 

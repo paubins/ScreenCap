@@ -26,4 +26,6 @@
 -(void)handleErrorInformation:(NSError *)error;
 
 -(void)showWebInspectorWithParameter:(BOOL)console;
+
+-(void)forceReload;
 @end

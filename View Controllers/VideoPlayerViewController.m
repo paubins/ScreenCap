@@ -154,7 +154,7 @@ static CGFloat forwardRatio = 1;
     //设置NSTableView 双击事件
     [self.tableView setDoubleAction:@selector(doubleClickTableViewRow:)];
     self.leftSplitView.delegate = self;
-    [self initPlaylistTableView];
+//    [self initPlaylistTableView];
     self.titleView = [[TitleViewController alloc]init];
 }
 
@@ -220,6 +220,7 @@ NSTimer *leftSplitTimer;
     [kCurrentWindow standardWindowButton:NSWindowMiniaturizeButton].hidden = isHide;
     [kCurrentWindow standardWindowButton:NSWindowZoomButton].hidden = isHide;
 }
+
 - (IBAction)openFile:(id)sender {
     self.openPanel = [[NSOpenPanel alloc]init];
     [self.openPanel setAllowsMultipleSelection:YES];
@@ -953,8 +954,13 @@ NSTimer *leftSplitTimer;
     
 }
 // !!!: - 初始化播放列表
--(void)initPlaylistTableView{
-    self.dataResults = [VideoInfomation allObjectsInRealm:REALM];
+-(void)initPlaylistTableView {
+    @try {
+        self.dataResults = [VideoInfomation allObjectsInRealm:REALM];
+    } @catch (NSException *exception) {
+        [[NSFileManager defaultManager] removeItemAtPath:[RLMRealmConfiguration defaultConfiguration].fileURL.path error:nil];
+        self.dataResults = [VideoInfomation allObjectsInRealm:REALM];
+    }
 }
 // !!!: NSTableViewDataSource&NSTableViewDelegate ---播放列表
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView{
@@ -987,7 +993,7 @@ NSTimer *leftSplitTimer;
 }
 
 -(CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row{
-    return 50;
+    return 80;
 }
 - (BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row{
     return YES;
@@ -1123,6 +1129,7 @@ NSButton *fastBtn;
 //MARK: 右上角RightSplitView 清除所有视频记录
 - (IBAction)clearAll:(id)sender {
     RLMResults *result = [VideoInfomation allObjectsInRealm:REALM];
+    
     NSAlert *alert = [[NSAlert alloc]init];
     if (result.count>0) {
         alert.messageText = NSLocalizedString(@"Warning", nil);

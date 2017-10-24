@@ -16,6 +16,7 @@
 @property (nonatomic,copy) NSString *totalTime;
 //大小
 @property (nonatomic,copy) NSString *size;
+
 //路径
 @property (nonatomic,copy) NSString *url;
 //路径数据 ---此数据是在沙盒的环境下用到的

@@ -8,7 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 #import "URLAsset.h"
+
 @class SBPlaylistItem;
+@class AppDelegate;
+
 //SBPlaylistItem协议
 @protocol SBPlaylistItemDelegate <NSObject>
 @required
@@ -26,6 +29,8 @@
 @property (weak) IBOutlet NSButton *closeBtn;
 //视频地址
 @property (nonatomic,strong) NSURL *url;
+//视频地址
+@property (nonatomic,strong) NSString *dropboxURL;
 //视频大小
 @property (weak) IBOutlet NSTextField *size;
 //代理

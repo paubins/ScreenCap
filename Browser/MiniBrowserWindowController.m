@@ -107,7 +107,7 @@ static NSArray * internalPageList;
     
     [mainView addSubview:webView];
     
-    [self loadURL:kDefaultWebPage];
+//    [self loadURL:kDefaultWebPage];
 }
 
 - (void)close

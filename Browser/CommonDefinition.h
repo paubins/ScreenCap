@@ -36,7 +36,7 @@ typedef enum{
 #define kGoToolbaritemID   @"Go"
 #define kProgressToolbaritemID   @"Progress"
 
-#define kDefaultWebPage   @"http://www.baidu.com"
+#define kDefaultWebPage   @"http://vidjo.co"
 
 #define UserAgent_UCBrowserIpad @"Mozilla/5.0(iPad; U;CPU OS 6 like Mac OS X; zh-CN; x86_64) AppleWebKit/534.46 (KHTML, like Gecko) UCBrowser/2.0.0.164 U3/0.8.0 Safari/7543.48.3"
 #define UserAgent_SafariIpad @"Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A403 Safari/8536.25"

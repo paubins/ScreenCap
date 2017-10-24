@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
     </dependencies>
     <objects>
@@ -15,6 +14,7 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="ScreenCap">
             <connections>
                 <outlet property="audioDevices" destination="S5S-xH-uTx" id="rEh-SM-RgE"/>
+                <outlet property="loginButton" destination="XK1-c8-oYi" id="k1s-Oo-nzu"/>
                 <outlet property="recordMenuItem" destination="D6d-j5-syl" id="BVR-HC-Ngw"/>
                 <outlet property="statusMenu" destination="aTI-v8-1ni" id="5bf-bt-czy"/>
             </connections>
@@ -22,8 +22,7 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu autoenablesItems="NO" id="aTI-v8-1ni">
             <items>
-                <menuItem title="Record" id="D6d-j5-syl">
-                    <modifierMask key="keyEquivalentModifierMask"/>
+                <menuItem title="Record" keyEquivalent="r" id="D6d-j5-syl">
                     <connections>
                         <action selector="record:" target="Voe-Tx-rLC" id="Mht-T4-rZm"/>
                     </connections>
@@ -39,14 +38,13 @@
                     </menu>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="qe0-HF-oRD"/>
-                <menuItem title="History" id="4AS-L9-3vy">
-                    <modifierMask key="keyEquivalentModifierMask"/>
+                <menuItem title="History" keyEquivalent="h" id="4AS-L9-3vy">
                     <connections>
                         <action selector="showHistory:" target="Voe-Tx-rLC" id="Cfr-he-JGF"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="pxF-IM-Kd8"/>
-                <menuItem title="Settings" tag="2" id="XK1-c8-oYi">
+                <menuItem title="Login with Dropbox..." tag="2" id="XK1-c8-oYi">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="statusMenuClicked:" target="Voe-Tx-rLC" id="okm-jo-rKh"/>

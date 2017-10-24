@@ -39,6 +39,15 @@
 		5F11EA971F7E187700D2A57F /* ISSoundAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F08222E1F7DB4EC002ACE6E /* ISSoundAdditions.m */; };
 		5F11EA991F7E1F3200D2A57F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F11EA981F7E1EC400D2A57F /* MainMenu.xib */; };
 		5F7694791F7AF077004AB34D /* DeviceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7694781F7AF077004AB34D /* DeviceList.swift */; };
+		5FB0AFB11F8498AD00E30259 /* CookieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB0AFB01F8498AD00E30259 /* CookieController.m */; };
+		5FB0AFBA1F85544D00E30259 /* MYProgressIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB0AFB21F85544800E30259 /* MYProgressIndicator.m */; };
+		5FB0AFBB1F85544D00E30259 /* MyActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB0AFB31F85544900E30259 /* MyActivityIndicator.m */; };
+		5FB0AFBC1F85544D00E30259 /* MYProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB0AFB41F85544900E30259 /* MYProgressHUD.m */; };
+		5FB0AFBD1F85544D00E30259 /* ProgressActivityBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB0AFB61F85544B00E30259 /* ProgressActivityBezierPath.m */; };
+		5FB0AFC11F8561BD00E30259 /* NSAttributedString+.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB0AFC01F8561BD00E30259 /* NSAttributedString+.m */; };
+		5FB0AFC41F8567C200E30259 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB0AFC31F8567C200E30259 /* NotificationController.m */; };
+		5FB0AFC71F857EEA00E30259 /* JFImageSavePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB0AFC51F857EE800E30259 /* JFImageSavePanel.m */; };
+		5FB0AFC91F857FCC00E30259 /* JFImageSavePanelAccessoryView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 5FB0AFC81F857FAE00E30259 /* JFImageSavePanelAccessoryView.xib */; };
 		5FE4DCB91F7EB758000A64A1 /* MiniBrowserDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE4DC8B1F7EB392000A64A1 /* MiniBrowserDocument.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5FE4DCBA1F7EB758000A64A1 /* MiniBrowserFrameLoaderClients.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE4DC8D1F7EB392000A64A1 /* MiniBrowserFrameLoaderClients.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5FE4DCBB1F7EB758000A64A1 /* MiniBrowserPolicyDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE4DC8F1F7EB392000A64A1 /* MiniBrowserPolicyDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -170,6 +179,23 @@
 		5F08234A1F7DF965002ACE6E /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		5F11EA981F7E1EC400D2A57F /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		5F7694781F7AF077004AB34D /* DeviceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceList.swift; sourceTree = "<group>"; };
+		5FB0AFAF1F8498AD00E30259 /* CookieController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CookieController.h; sourceTree = "<group>"; };
+		5FB0AFB01F8498AD00E30259 /* CookieController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CookieController.m; sourceTree = "<group>"; };
+		5FB0AFB21F85544800E30259 /* MYProgressIndicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYProgressIndicator.m; sourceTree = "<group>"; };
+		5FB0AFB31F85544900E30259 /* MyActivityIndicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyActivityIndicator.m; sourceTree = "<group>"; };
+		5FB0AFB41F85544900E30259 /* MYProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYProgressHUD.m; sourceTree = "<group>"; };
+		5FB0AFB51F85544A00E30259 /* MyActivityIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyActivityIndicator.h; sourceTree = "<group>"; };
+		5FB0AFB61F85544B00E30259 /* ProgressActivityBezierPath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgressActivityBezierPath.m; sourceTree = "<group>"; };
+		5FB0AFB71F85544B00E30259 /* ProgressActivityBezierPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressActivityBezierPath.h; sourceTree = "<group>"; };
+		5FB0AFB81F85544C00E30259 /* MYProgressIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYProgressIndicator.h; sourceTree = "<group>"; };
+		5FB0AFB91F85544D00E30259 /* MYProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYProgressHUD.h; sourceTree = "<group>"; };
+		5FB0AFBF1F8561BD00E30259 /* NSAttributedString+.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+.h"; sourceTree = "<group>"; };
+		5FB0AFC01F8561BD00E30259 /* NSAttributedString+.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+.m"; sourceTree = "<group>"; };
+		5FB0AFC21F8567C200E30259 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		5FB0AFC31F8567C200E30259 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		5FB0AFC51F857EE800E30259 /* JFImageSavePanel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFImageSavePanel.m; sourceTree = "<group>"; };
+		5FB0AFC61F857EE900E30259 /* JFImageSavePanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFImageSavePanel.h; sourceTree = "<group>"; };
+		5FB0AFC81F857FAE00E30259 /* JFImageSavePanelAccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JFImageSavePanelAccessoryView.xib; sourceTree = "<group>"; };
 		5FE4DC7A1F7EB392000A64A1 /* CommonDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonDefinition.h; sourceTree = "<group>"; };
 		5FE4DC7C1F7EB392000A64A1 /* MiniBrowserNavigatorButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiniBrowserNavigatorButton.h; sourceTree = "<group>"; };
 		5FE4DC7D1F7EB392000A64A1 /* MiniBrowserNavigatorButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiniBrowserNavigatorButton.m; sourceTree = "<group>"; };
@@ -359,6 +385,31 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5FB0AFBE1F85545200E30259 /* Activity Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				5FB0AFB51F85544A00E30259 /* MyActivityIndicator.h */,
+				5FB0AFB31F85544900E30259 /* MyActivityIndicator.m */,
+				5FB0AFB91F85544D00E30259 /* MYProgressHUD.h */,
+				5FB0AFB41F85544900E30259 /* MYProgressHUD.m */,
+				5FB0AFB81F85544C00E30259 /* MYProgressIndicator.h */,
+				5FB0AFB21F85544800E30259 /* MYProgressIndicator.m */,
+				5FB0AFB71F85544B00E30259 /* ProgressActivityBezierPath.h */,
+				5FB0AFB61F85544B00E30259 /* ProgressActivityBezierPath.m */,
+			);
+			path = "Activity Indicator";
+			sourceTree = "<group>";
+		};
+		5FB0AFCA1F85802300E30259 /* Save Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				5FB0AFC81F857FAE00E30259 /* JFImageSavePanelAccessoryView.xib */,
+				5FB0AFC61F857EE900E30259 /* JFImageSavePanel.h */,
+				5FB0AFC51F857EE800E30259 /* JFImageSavePanel.m */,
+			);
+			path = "Save Dialog";
+			sourceTree = "<group>";
+		};
 		5FE4DC6B1F7EB385000A64A1 /* Browser */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,6 +514,8 @@
 				5FE4DCE61F7EFA4D000A64A1 /* OC-birdge.h */,
 				5FE4DCEE1F7EFA4F000A64A1 /* PasteboardObserver.swift */,
 				5FE4DCEC1F7EFA4E000A64A1 /* SMMSService.swift */,
+				5FB0AFBF1F8561BD00E30259 /* NSAttributedString+.h */,
+				5FB0AFC01F8561BD00E30259 /* NSAttributedString+.m */,
 			);
 			path = Uploader;
 			sourceTree = "<group>";
@@ -470,6 +523,12 @@
 		5FF180761F7AC7F0003E2C06 = {
 			isa = PBXGroup;
 			children = (
+				5FB0AFCA1F85802300E30259 /* Save Dialog */,
+				5FB0AFC21F8567C200E30259 /* NotificationController.h */,
+				5FB0AFC31F8567C200E30259 /* NotificationController.m */,
+				5FB0AFBE1F85545200E30259 /* Activity Indicator */,
+				5FB0AFAF1F8498AD00E30259 /* CookieController.h */,
+				5FB0AFB01F8498AD00E30259 /* CookieController.m */,
 				5FE4DCE11F7EFA39000A64A1 /* Uploader */,
 				5FE4DC6B1F7EB385000A64A1 /* Browser */,
 				5F0823391F7DC27C002ACE6E /* VLCKit.framework */,
@@ -758,13 +817,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScreenCapUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		23FADB4D9C6B7943EE7734F8 /* [CP] Embed Pods Frameworks */ = {
@@ -801,13 +863,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScreenCapTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		91689B1EE258D135B897EB6B /* [CP] Copy Pods Resources */ = {
@@ -831,13 +896,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScreenCap-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B028CB175DFDB707075E978A /* [CP] Copy Pods Resources */ = {
@@ -861,9 +929,32 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ScreenCap/Pods-ScreenCap-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Base64/Base64.framework",
+				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
+				"${BUILT_PRODUCTS_DIR}/FlatButton/FlatButton.framework",
+				"${BUILT_PRODUCTS_DIR}/MASPreferences/MASPreferences.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/ProgressKit/ProgressKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyDropbox/SwiftyDropbox.framework",
+				"${BUILT_PRODUCTS_DIR}/TMCache/TMCache.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Base64.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlatButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MASPreferences.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProgressKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyDropbox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TMCache.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -894,6 +985,7 @@
 			files = (
 				5F11EA951F7E141900D2A57F /* VideoPlayerWindowController.m in Sources */,
 				5F08233C1F7DE5D2002ACE6E /* VideoPlayerViewController.m in Sources */,
+				5FB0AFBA1F85544D00E30259 /* MYProgressIndicator.m in Sources */,
 				5F08233D1F7DE5D2002ACE6E /* ColorPanelViewController.m in Sources */,
 				5F08233E1F7DE5D2002ACE6E /* NSView+Moveable.m in Sources */,
 				5F08233F1F7DE5D2002ACE6E /* SBAlertView.m in Sources */,
@@ -909,19 +1001,24 @@
 				5FE4DCF01F7EFD88000A64A1 /* AppCache.swift in Sources */,
 				5FE4DCF11F7EFD88000A64A1 /* AppConfig.swift in Sources */,
 				5FE4DCF21F7EFD88000A64A1 /* AppHelper.swift in Sources */,
+				5FB0AFC71F857EEA00E30259 /* JFImageSavePanel.m in Sources */,
 				5FE4DCF31F7EFD88000A64A1 /* DragDestinationView.swift in Sources */,
 				5FE4DCF41F7EFD88000A64A1 /* GeneralViewController.swift in Sources */,
 				5FE4DCF51F7EFD88000A64A1 /* GeneralViewController.xib in Sources */,
 				5FE4DCF61F7EFD88000A64A1 /* ImagePreferencesViewController.swift in Sources */,
+				5FB0AFB11F8498AD00E30259 /* CookieController.m in Sources */,
 				5FE4DCF71F7EFD88000A64A1 /* ImagePreferencesViewController.xib in Sources */,
 				5FE4DCF81F7EFD88000A64A1 /* ImageService.swift in Sources */,
 				5FE4DCF91F7EFD88000A64A1 /* OC-birdge.h in Sources */,
+				5FB0AFBC1F85544D00E30259 /* MYProgressHUD.m in Sources */,
 				5FE4DCFA1F7EFD88000A64A1 /* PasteboardObserver.swift in Sources */,
 				5FE4DCFD1F7EFD88000A64A1 /* SMMSService.swift in Sources */,
 				5FE4DCC11F7EB767000A64A1 /* ASLQuery.m in Sources */,
 				5FE4DCC21F7EB767000A64A1 /* ASLResponse.m in Sources */,
 				5FE4DCC31F7EB767000A64A1 /* NSData+Base64.m in Sources */,
 				5FE4DCC41F7EB767000A64A1 /* NSObject+Properties.m in Sources */,
+				5FB0AFBD1F85544D00E30259 /* ProgressActivityBezierPath.m in Sources */,
+				5FB0AFBB1F85544D00E30259 /* MyActivityIndicator.m in Sources */,
 				5FE4DCB91F7EB758000A64A1 /* MiniBrowserDocument.m in Sources */,
 				5FE4DCBA1F7EB758000A64A1 /* MiniBrowserFrameLoaderClients.m in Sources */,
 				5FE4DCBB1F7EB758000A64A1 /* MiniBrowserPolicyDelegate.m in Sources */,
@@ -937,11 +1034,14 @@
 				5F0823431F7DE5D2002ACE6E /* SBView.m in Sources */,
 				5F0823441F7DE5D2002ACE6E /* TitleViewController.m in Sources */,
 				5F0823451F7DE5D2002ACE6E /* ToolViewController.h in Sources */,
+				5FB0AFC91F857FCC00E30259 /* JFImageSavePanelAccessoryView.xib in Sources */,
+				5FB0AFC41F8567C200E30259 /* NotificationController.m in Sources */,
 				5F08234B1F7DF965002ACE6E /* Test.swift in Sources */,
 				5F0823461F7DE5D2002ACE6E /* ToolViewController.m in Sources */,
 				5FE4DCD81F7EBD7A000A64A1 /* Logging.cpp in Sources */,
 				5F7694791F7AF077004AB34D /* DeviceList.swift in Sources */,
 				5FF180B01F7ACA07003E2C06 /* Recorder.swift in Sources */,
+				5FB0AFC11F8561BD00E30259 /* NSAttributedString+.m in Sources */,
 				5F0823351F7DB761002ACE6E /* VideoController.m in Sources */,
 				5FF180851F7AC7F0003E2C06 /* ViewController.swift in Sources */,
 				5FF180831F7AC7F0003E2C06 /* AppDelegate.swift in Sources */,
@@ -1124,7 +1224,7 @@
 				);
 				INFOPLIST_FILE = "Video Journal/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.paubins.VideoJournal;
 				PRODUCT_MODULE_NAME = ScreenCap;
 				PRODUCT_NAME = VideoJournal;
@@ -1154,7 +1254,7 @@
 				);
 				INFOPLIST_FILE = "Video Journal/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.paubins.VideoJournal;
 				PRODUCT_MODULE_NAME = ScreenCap;
 				PRODUCT_NAME = VideoJournal;

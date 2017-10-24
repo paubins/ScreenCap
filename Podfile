@@ -15,6 +15,9 @@ target 'ScreenCap' do
   pod 'Base64'
   pod 'MASPreferences', :git => 'git@github.com:shpakovski/MASPreferences.git', :branch => 'master'
   pod 'TMCache'
+  pod 'FlatButton'
+  pod 'SwiftyDropbox'
+  pod 'ProgressKit' 
 
   # Pods for ScreenCap
 
